@@ -13,7 +13,7 @@ all: $(LIB_NAME) test
 $(LIB_NAME): matrix.o
 	ar rcs $@ $<
 
-s21_matrix.o: matrix.c matrix.h
+matrix.o: matrix.c matrix.h
 	$(CC) $(CFLAGS_LIB) -c $< -o $@
 
 test: tests.o $(LIB_NAME)
